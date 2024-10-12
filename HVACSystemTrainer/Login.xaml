@@ -1,0 +1,72 @@
+﻿<Window x:Class="HVACSystemTrainer.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HVACSystemTrainer"
+        mc:Ignorable="d"
+        Title="Login" Height="1080" Width="1920" Background="#444349" WindowState="Maximized" >
+    <Window.Resources>
+        <Style x:Key="RoundedTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="15">
+                                                        <ContentPresenter HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundedPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border x:Name="Border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+Background="{TemplateBinding Background}"
+BorderBrush="{TemplateBinding BorderBrush}"
+BorderThickness="1"
+CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center"
+VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="300">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="usernameTextBlock" Grid.Row="0" Grid.Column="0" FontSize="60" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" Text="PIN" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button x:Name="loginButton" Content="Login" Click="loginButton_Click" Grid.Row="2" Grid.Column="1" Width="350" Height="100" FontSize="40" FontFamily="Roboto" FontWeight="Bold" Background="#ffc619" Foreground="#010101" Style="{StaticResource RoundedButtonStyle}" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+        <PasswordBox x:Name="password" GotFocus="password_GotFocus" FontSize="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20" Width="1000" Height="100"/>
+    </Grid>
+</Window>
