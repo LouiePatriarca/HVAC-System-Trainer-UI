@@ -65,8 +65,11 @@ VerticalAlignment="Center"/>
             <RowDefinition Height="150"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="usernameTextBlock" Grid.Row="0" Grid.Column="0" FontSize="60" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" Text="PIN" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Border Grid.Column="1" CornerRadius="15" Background="White" Margin="15">
+            <PasswordBox x:Name="password" GotFocus="password_GotFocus" FontSize="60"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20" Width="1000" Height="100"/>
+        </Border>
+        <TextBlock x:Name="usernameTextBlock" Grid.Row="0" Grid.Column="0" FontSize="60" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" Text="PIN" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
         <Button x:Name="loginButton" Content="Login" Click="loginButton_Click" Grid.Row="2" Grid.Column="1" Width="350" Height="100" FontSize="40" FontFamily="Roboto" FontWeight="Bold" Background="#ffc619" Foreground="#010101" Style="{StaticResource RoundedButtonStyle}" HorizontalAlignment="Right" Margin="0,0,20,0"/>
-        <PasswordBox x:Name="password" GotFocus="password_GotFocus" FontSize="60" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20" Width="1000" Height="100"/>
+       
     </Grid>
 </Window>

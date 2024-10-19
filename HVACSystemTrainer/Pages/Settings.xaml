@@ -52,14 +52,14 @@
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="DM Assignment" Grid.Row="0" Grid.Column="0" Padding="40,0,0,0" FontSize="50" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Compressor Motor DM" Grid.Row="1" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Condenser Motor DM" Grid.Row="2" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Induction Motor DM" Grid.Row="3" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Damper Control DM" Grid.Row="4" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Machine Status DM" Grid.Row="5" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Machine Mode DM" Grid.Row="6" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Temperature DM" Grid.Row="7" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="DM Address Assignment" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Padding="40,0,0,0" FontSize="50" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Compressor Motor" Grid.Row="1" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Condenser Motor" Grid.Row="2" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Induction Motor" Grid.Row="3" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Damper Control" Grid.Row="4" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Machine Status" Grid.Row="5" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Machine Mode" Grid.Row="6" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Temperature" Grid.Row="7" Grid.Column="0" Padding="40,0,0,0" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
                 <Border CornerRadius="15,15,15,15" Grid.Row="1" Grid.Column="1" Background="#ffffff" Width="140" Height="80" >
                     <TextBox x:Name="compressorMotorDM" Text="11" Width="130" BorderBrush="#ffff" BorderThickness="0" Height="70" FontSize="36" FontFamily="Roboto" FontWeight="Bold" Foreground="#000000" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" VerticalContentAlignment="Center"/>

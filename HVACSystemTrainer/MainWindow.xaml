@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HVACSystemTrainer"
         mc:Ignorable="d"
         
-        Title="HVAC System Trainer" Height="1080" Width="1920" Background="#444349" WindowState="Maximized">
+        Title="HVAC System Trainer" Height="1080" Width="1920" Background="#444349" WindowState="Maximized" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>

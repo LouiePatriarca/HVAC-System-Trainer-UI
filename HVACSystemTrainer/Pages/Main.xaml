@@ -152,7 +152,7 @@ VerticalAlignment="Center"/>
                             <RowDefinition/>
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <TextBlock x:Name="machineStatus" Grid.Row="0" Text="Stop" FontSize="90" FontFamily="Roboto" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="machineStatus" Grid.Row="0" Text="Stop" FontSize="60" FontFamily="Roboto" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock x:Name="machineStatusTextBlock" Grid.Row="1" Text="Machine Status" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FF838284" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </Border>
