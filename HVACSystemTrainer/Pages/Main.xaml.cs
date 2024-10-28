@@ -56,7 +56,7 @@ namespace HVACSystemTrainer.Pages
                 }
                 catch (Exception ex)
                 {
-                    systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "PLC serial port is closed. Check the cable connection and restart the system.");
+                    systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "PLC serial port is closed. Check the cable connection and configuration then restart the system.");
                 }
             }
             
@@ -115,7 +115,7 @@ namespace HVACSystemTrainer.Pages
                 }
                 else
                 {
-                    systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "Arduino serial port is closed.");
+                    systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "Arduino serial port is closed. Check the cable connection and configuration then restart the system.");
                 }
             }
             catch (Exception ex)
