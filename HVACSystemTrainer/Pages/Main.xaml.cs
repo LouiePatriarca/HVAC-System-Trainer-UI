@@ -53,6 +53,10 @@ namespace HVACSystemTrainer.Pages
                 try
                 {
                     _serialPort.Open();
+                    omronSerialHostLink = new OmronSerialHostLink(_serialPort);
+                    backgroundWorker = new BackgroundWorker();
+                    backgroundWorker.DoWork += BackgroundWorker_DoWork;
+                    backgroundWorker.RunWorkerAsync();
                 }
                 catch (Exception ex)
                 {
@@ -60,10 +64,7 @@ namespace HVACSystemTrainer.Pages
                 }
             }
             
-            omronSerialHostLink = new OmronSerialHostLink(_serialPort);
-            backgroundWorker = new BackgroundWorker();
-            backgroundWorker.DoWork += BackgroundWorker_DoWork;
-            backgroundWorker.RunWorkerAsync();
+            
             compressorMotorImage.Source = (registryManager.ReadDWORDValue("CompressorMotor") == 1) ? new BitmapImage(new Uri("/Images/icons8-toggle-on-96.png", UriKind.Relative)) : compressorMotorImage.Source = new BitmapImage(new Uri("/Images/icons8-toggle-off-96.png", UriKind.Relative));
             condenserMotorImage.Source = (registryManager.ReadDWORDValue("CondenserMotor") == 1) ? new BitmapImage(new Uri("/Images/icons8-toggle-on-96.png", UriKind.Relative)) : compressorMotorImage.Source = new BitmapImage(new Uri("/Images/icons8-toggle-off-96.png", UriKind.Relative));
             inductionMotorImage.Source = (registryManager.ReadDWORDValue("InductionMotor") == 1) ? new BitmapImage(new Uri("/Images/icons8-toggle-on-96.png", UriKind.Relative)) : compressorMotorImage.Source = new BitmapImage(new Uri("/Images/icons8-toggle-off-96.png", UriKind.Relative));
