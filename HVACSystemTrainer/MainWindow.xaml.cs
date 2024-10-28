@@ -1,5 +1,6 @@
 ﻿using HVACSystemTrainer.Classes;
 using Microsoft.Win32;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Ports;
 using System.Text;
@@ -40,6 +41,13 @@ namespace HVACSystemTrainer
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
+
+        private void restartImage_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var currentProcess = Process.GetCurrentProcess();
+            Process.Start(currentProcess.MainModule.FileName);
             Application.Current.Shutdown();
         }
     }

@@ -288,7 +288,14 @@ VerticalAlignment="Center"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <TextBlock x:Name="systemReportTextBlock" Grid.Column="1" Text="System Report" FontSize="40" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ListBox x:Name="systemReportList" Grid.Row="1" BorderThickness="0" Margin="10,0,10,0" Background="#262626" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FFD0D0D0"/>
+            <ListBox x:Name="systemReportList" Grid.Row="1" BorderThickness="0" Margin="10,0,10,0" Background="#262626" FontSize="20" FontFamily="Roboto" FontWeight="Bold"  Foreground="#FFD0D0D0" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
             <Button x:Name="saveReportButton" Click="saveReportButton_Click" Content="Save Report" Background="#ffc619" Grid.Row="2" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Margin="15,15,15,15" Style="{StaticResource RoundedButtonStyle}"/>
         </Grid>
     </Grid>

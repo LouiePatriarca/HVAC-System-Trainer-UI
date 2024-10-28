@@ -30,6 +30,7 @@
     <None Remove="Images\icons8-minus-96.png" />
     <None Remove="Images\icons8-percent-96.png" />
     <None Remove="Images\icons8-plus-96.png" />
+    <None Remove="Images\icons8-restart-96.png" />
     <None Remove="Images\icons8-stop-squared-96.png" />
     <None Remove="Images\icons8-temperature-96.png" />
     <None Remove="Images\icons8-toggle-off-96.png" />
@@ -52,6 +53,7 @@
     <Resource Include="Images\icons8-minus-96.png" />
     <Resource Include="Images\icons8-percent-96.png" />
     <Resource Include="Images\icons8-plus-96.png" />
+    <Resource Include="Images\icons8-restart-96.png" />
     <Resource Include="Images\icons8-stop-squared-96.png" />
     <Resource Include="Images\icons8-temperature-96.png" />
     <Resource Include="Images\icons8-toggle-off-96.png" />

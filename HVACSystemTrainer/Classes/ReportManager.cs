@@ -13,9 +13,9 @@ namespace HVACSystemTrainer.Classes
             try
             {
                 // Create and configure the SaveFileDialog
-                SaveFileDialog saveFileDialog = new SaveFileDialog
+                SaveFileDialog saveFileDialog = new()
                 {
-                    FileName = "Report.txt", // Default file name
+                    FileName = $"Report{DateTime.Now:ddMMyyyyHHmm}.txt", // Default file name
                     DefaultExt = ".txt", // Default file extension
                     Filter = "Text documents (.txt)|*.txt" // Filter files by extension
                 };

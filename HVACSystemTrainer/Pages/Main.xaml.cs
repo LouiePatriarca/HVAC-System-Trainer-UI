@@ -17,7 +17,6 @@ namespace HVACSystemTrainer.Pages
     /// </summary>
     public partial class Main : Page
     {
-        ////omronHostLink //omronHostLink;
         ArduinoLink arduinoLink;
         BackgroundWorker backgroundWorker;
         ReportManager reportManager;
@@ -32,8 +31,8 @@ namespace HVACSystemTrainer.Pages
             InitializeComponent();
             reportManager = new ReportManager();
             registryManager = new RegistryManager();
-            //arduinoLink = new ArduinoLink();
-            //arduinoLink.serialPort.DataReceived += SerialPort_DataReceived;
+            arduinoLink = new ArduinoLink();
+            arduinoLink.serialPort.DataReceived += SerialPort_DataReceived;
 
             this.Unloaded += Main_Unloaded;
             mainWindow = (MainWindow)Application.Current.MainWindow;
@@ -48,7 +47,19 @@ namespace HVACSystemTrainer.Pages
                 Encoding = Encoding.ASCII
             };
             _serialPort.DataReceived += PLC_DataReceived;
-            _serialPort.Open();
+       
+            if (!_serialPort.IsOpen)
+            {
+                try
+                {
+                    _serialPort.Open();
+                }
+                catch (Exception ex)
+                {
+                    systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "PLC serial port is closed. Check the cable connection and restart the system.");
+                }
+            }
+            
             omronSerialHostLink = new OmronSerialHostLink(_serialPort);
             backgroundWorker = new BackgroundWorker();
             backgroundWorker.DoWork += BackgroundWorker_DoWork;
@@ -66,7 +77,7 @@ namespace HVACSystemTrainer.Pages
                 if (_serialPort.IsOpen)
                 {
                     omronSerialHostLink.Reads(0, HeaderCode_Read.RD, (ushort)registryManager.ReadDWORDValue("MachineStatusDM"), 2);
-                    Thread.Sleep(5000);
+                    Thread.Sleep(3000);
                 }
             }
         }
@@ -81,7 +92,7 @@ namespace HVACSystemTrainer.Pages
                     string[] SensorsData = message.Split(',');
                     arduinoLink.serialPort.DiscardInBuffer();
                     arduinoLink.serialPort.DiscardOutBuffer();
-                    if (SensorsData.Length >0)
+                    if (SensorsData.Length>0)
                     {
                         Dispatcher.BeginInvoke(new Action(() => {
                             temperature1.Text = SensorsData[0] + " °C";
@@ -204,8 +215,8 @@ namespace HVACSystemTrainer.Pages
 
         private void Main_Unloaded(object sender, RoutedEventArgs e)
         {
-            //arduinoLink.serialPort.DataReceived -= SerialPort_DataReceived;
-            //arduinoLink.ClosePort();
+            arduinoLink.serialPort.DataReceived -= SerialPort_DataReceived;
+            arduinoLink.ClosePort();
         }
 
         private void compressorMotorImage_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

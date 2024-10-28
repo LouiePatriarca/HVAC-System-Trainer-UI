@@ -26,6 +26,7 @@ namespace HVACSystemTrainer
         {
             InitializeComponent();
             registryManager = new RegistryManager();
+            password.Focus();
         }
 
         private void password_GotFocus(object sender, RoutedEventArgs e)
@@ -52,7 +53,7 @@ namespace HVACSystemTrainer
                     process.Kill();
                 }
                 this.Hide();
-                MainWindow mainWindow = new MainWindow();  
+                MainWindow mainWindow = new();  
                 mainWindow.Show();
             }
         }

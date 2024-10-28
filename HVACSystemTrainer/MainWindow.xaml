@@ -18,6 +18,7 @@
                 <RowDefinition Height="140"/>
                 <RowDefinition />
                 <RowDefinition Height="140"/>
+                <RowDefinition Height="140"/>
             </Grid.RowDefinitions>
             <Border Background="#ffffff" CornerRadius="15" Margin="15,15,15,0"  Grid.Row="0">
                 <Image x:Name="dashboard" Source="/Images/icons8-dashboard-96.png" Width="100" Height="80" HorizontalAlignment="Center" MouseDown="dashboard_MouseDown"/>
@@ -26,6 +27,9 @@
                 <Image x:Name="settings" Source="/Images/icons8-gear-96.png" Width="100" Height="80" HorizontalAlignment="Center" MouseDown="settings_MouseDown"/>
             </Border>
             <Border Background="#ffffff" CornerRadius="15" Margin="15"  Grid.Row="3" >
+                <Image x:Name="restartImage" Source="/Images/icons8-restart-96.png" Width="100" Height="80" HorizontalAlignment="Center" MouseDown="restartImage_MouseDown"/>
+            </Border>
+            <Border Background="#ffffff" CornerRadius="15" Margin="15"  Grid.Row="4" >
                 <Image x:Name="logoutImage" Source="/Images/icons8-logout-96.png" Width="100" Height="80" HorizontalAlignment="Center" MouseDown="logoutImage_MouseDown"/>
             </Border>
         </Grid>
