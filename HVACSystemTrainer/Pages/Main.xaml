@@ -72,7 +72,7 @@ VerticalAlignment="Center"/>
                                 <RowDefinition/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <TextBlock x:Name="temperature1" Grid.Row="0" Text="0°C" FontSize="90" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="temperature1" Grid.Row="0" Text="0°C" FontSize="80" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="temperature1TextBlock" Grid.Row="1" Text="Temperature 1" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FF838284" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
@@ -83,7 +83,7 @@ VerticalAlignment="Center"/>
                                 <RowDefinition/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <TextBlock x:Name="temperature2" Grid.Row="0" Text="0°C" FontSize="90" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="temperature2" Grid.Row="0" Text="0°C" FontSize="70" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="temperature2TextBlock" Grid.Row="1" Text="Temperature 2" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FF838284" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
@@ -94,7 +94,7 @@ VerticalAlignment="Center"/>
                                 <RowDefinition/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <TextBlock x:Name="temperature3" Grid.Row="0" Text="0°C" FontSize="90" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="temperature3" Grid.Row="0" Text="0°C" FontSize="70" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="temperature3TextBlock" Grid.Row="1" Text="Temperature 3" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FF838284" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
@@ -105,7 +105,7 @@ VerticalAlignment="Center"/>
                                 <RowDefinition/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <TextBlock x:Name="temperature4" Grid.Row="0" Text="0°C" FontSize="90" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="temperature4" Grid.Row="0" Text="0°C" FontSize="70" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <TextBlock x:Name="temperature4TextBlock" Grid.Row="1" Text="Temperature 4" FontSize="24" FontFamily="Roboto" FontWeight="Bold" Foreground="#FF838284" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </Border>
@@ -118,7 +118,7 @@ VerticalAlignment="Center"/>
                     <ColumnDefinition Width="120"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="airVelocityMonitoringImage" Grid.Column="1"  Width="100" Height="80" Source="/Images/icons8-air-96.png"/>
+                <Image x:Name="airVelocityMonitoringImage" Grid.Column="1"  Width="100" Height="70" Source="/Images/icons8-air-96.png"/>
                 <TextBlock x:Name="airVelocityMonitoringTextBlock" Grid.Column="2" Text="Air Velocity Monitoring" FontSize="40" FontFamily="Roboto" FontWeight="Bold" Foreground="#cecdce" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Grid>
             <!--Air Velocity Monitoring Content-->

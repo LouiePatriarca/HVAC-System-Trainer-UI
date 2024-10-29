@@ -31,11 +31,11 @@ namespace HVACSystemTrainer
 
         private void password_GotFocus(object sender, RoutedEventArgs e)
         {
-            var oskProcess = Process.Start("osk.exe");
+            //var oskProcess = Process.Start("osk.exe");
 
             Task.Run(() =>
             {
-                oskProcess.WaitForExit();
+                //oskProcess.WaitForExit();
                 Dispatcher.Invoke(() =>
                 {
                     loginButton.Focus();

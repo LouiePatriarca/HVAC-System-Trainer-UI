@@ -90,24 +90,25 @@ namespace HVACSystemTrainer.Pages
                 if (arduinoLink.serialPort.IsOpen)
                 {
                     string message = arduinoLink.serialPort.ReadExisting();
+                    int messageLength = message.Length;
                     string[] SensorsData = message.Split(',');
                     arduinoLink.serialPort.DiscardInBuffer();
                     arduinoLink.serialPort.DiscardOutBuffer();
-                    if (SensorsData.Length>0)
+                    if (messageLength>=26 && messageLength<=27)
                     {
                         Dispatcher.BeginInvoke(new Action(() => {
-                            temperature1.Text = SensorsData[0] + " °C";
-                            temperature2.Text = SensorsData[1] + " °C";
-                            temperature3.Text = SensorsData[2] + " °C";
-                            temperature4.Text = SensorsData[3] + " °C";
-                            airVelocity.Text = SensorsData[5] + " m/s";
+                            airVelocity.Text = SensorsData[0] + " m/s";
+                            temperature1.Text = SensorsData[1] + " °C";
+                            temperature2.Text = SensorsData[2] + " °C";
+                            temperature3.Text = SensorsData[3] + " °C";
+                            temperature4.Text = SensorsData[4].Substring(0, 5) + " °C";
                         }));
-                        if (SensorsData[0] == "20")
+                        if (SensorsData[3] == "20")
                         {
                             omronSerialHostLink.Writes(0, HeaderCode_Write.WD, (ushort)registryManager.ReadDWORDValue("TemperatureDM"), new short[] { (short)1 });
                             systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "Temperature reached the 20°C set point");
                         }
-                        if (SensorsData[3] == "28")
+                        if (SensorsData[3] == "24")
                         {
                             omronSerialHostLink.Writes(0, HeaderCode_Write.WD, (ushort)registryManager.ReadDWORDValue("TemperatureDM"), new short[] { (short)2 });
                             systemReportList.Items.Add(DateTime.Now.ToString("dd/MM/yyyy HH:mm: ") + "Temperature reached the 28°C set point");
@@ -329,11 +330,11 @@ namespace HVACSystemTrainer.Pages
 
         private void motorFrequency_GotFocus(object sender, RoutedEventArgs e)
         {
-            var oskProcess = Process.Start("osk.exe");
+            //var oskProcess = Process.Start("osk.exe");
 
             Task.Run(() =>
             {
-                oskProcess.WaitForExit();
+                //oskProcess.WaitForExit();
                 Dispatcher.Invoke(() =>
                 {
                     systemReportList.Focus();
